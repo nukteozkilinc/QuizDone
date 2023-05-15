@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pexels-codioful-(formerly-gradienta)-7130555.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pexels-codioful-(formerly-gradienta)-7130555@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pexels-codioful-(formerly-gradienta)-7130555@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

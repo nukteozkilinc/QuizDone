@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1008436552416-miu64tl2f4h9lt3jbif5nok1gbiclc5j.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1008436552416-miu64tl2f4h9lt3jbif5nok1gbiclc5j</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1008436552416-jrjf3b5s980cqoqrg4630e5vdoc4tvk1.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBobhpC2cYp8bHY0vmhh9024L9lCd4_zFY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1008436552416</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.QuizApp</string>
+	<key>PROJECT_ID</key>
+	<string>quizdone-e2e34</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quizdone-e2e34.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1008436552416:ios:2004cac42984eef574a685</string>
+	<key>DATABASE_URL</key>
+	<string>https://quizdone-e2e34-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
