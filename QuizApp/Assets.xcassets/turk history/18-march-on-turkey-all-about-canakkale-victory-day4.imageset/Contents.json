@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "18-march-on-turkey-all-about-canakkale-victory-day4.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "18-march-on-turkey-all-about-canakkale-victory-day4@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "18-march-on-turkey-all-about-canakkale-victory-day4@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
