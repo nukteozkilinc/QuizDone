@@ -14,11 +14,12 @@
 		8B40E6F929F96FD1006DC397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B40E6F729F96FD1006DC397 /* Main.storyboard */; };
 		8B40E6FB29F96FD2006DC397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B40E6FA29F96FD2006DC397 /* Assets.xcassets */; };
 		8B40E6FE29F96FD2006DC397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B40E6FC29F96FD2006DC397 /* LaunchScreen.storyboard */; };
-		8B81A1BC2A12388C005047AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81A1BB2A12388C005047AA /* Constants.swift */; };
+		8B81A1BC2A12388C005047AA /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81A1BB2A12388C005047AA /* C.swift */; };
 		8BAE2FF12A0E275200E89A81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BAE2FF02A0E275200E89A81 /* GoogleService-Info.plist */; };
 		8BB81E3B2A1005B600CACE5B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3A2A1005B600CACE5B /* RegisterViewController.swift */; };
 		8BB81E3D2A100D5000CACE5B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */; };
 		8BB81E3F2A10224500CACE5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3E2A10224500CACE5B /* LoginViewController.swift */; };
+		8BFABAA72A13D633001C48A2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFABAA62A13D633001C48A2 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +33,12 @@
 		8B40E6FA29F96FD2006DC397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B40E6FD29F96FD2006DC397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B40E6FF29F96FD2006DC397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B81A1BB2A12388C005047AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8B81A1BB2A12388C005047AA /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		8BAE2FF02A0E275200E89A81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BB81E3A2A1005B600CACE5B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		8BB81E3E2A10224500CACE5B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8BFABAA62A13D633001C48A2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A222D1014F7FB10077431E39 /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +83,9 @@
 				8BAE2FF02A0E275200E89A81 /* GoogleService-Info.plist */,
 				8B40E6FC29F96FD2006DC397 /* LaunchScreen.storyboard */,
 				8B40E6FF29F96FD2006DC397 /* Info.plist */,
-				8B81A1BB2A12388C005047AA /* Constants.swift */,
+				8B81A1BB2A12388C005047AA /* C.swift */,
+				8BFABAA62A13D633001C48A2 /* Category.swift */,
+				8BFABAA82A13D639001C48A2 /* Model */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -103,6 +107,13 @@
 				8BB81E3E2A10224500CACE5B /* LoginViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8BFABAA82A13D639001C48A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9E4182923258FB3E6F40EB70 /* Frameworks */ = {
@@ -242,9 +253,10 @@
 				8BB81E3D2A100D5000CACE5B /* CategoryViewController.swift in Sources */,
 				8B40E6F629F96FD1006DC397 /* ViewController.swift in Sources */,
 				8B40E6F229F96FD1006DC397 /* AppDelegate.swift in Sources */,
-				8B81A1BC2A12388C005047AA /* Constants.swift in Sources */,
+				8B81A1BC2A12388C005047AA /* C.swift in Sources */,
 				8B40E6F429F96FD1006DC397 /* SceneDelegate.swift in Sources */,
 				8BB81E3B2A1005B600CACE5B /* RegisterViewController.swift in Sources */,
+				8BFABAA72A13D633001C48A2 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

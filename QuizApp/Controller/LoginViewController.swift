@@ -16,7 +16,7 @@ class LoginViewController : UIViewController {
                     print(e)
                 }else{
                     //Navigate to Category
-                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
+                    self.performSegue(withIdentifier: C.loginSegue, sender: self)
                 }
             }
         }

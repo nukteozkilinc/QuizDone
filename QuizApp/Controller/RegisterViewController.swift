@@ -16,7 +16,7 @@ class RegisterViewController : UIViewController{
                     print(e.localizedDescription) // You can add pop up alert
                 }else{
                     //Navigate to Category
-                    self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
+                    self.performSegue(withIdentifier: C.registerSegue, sender: self)
                 }
             }
         }
