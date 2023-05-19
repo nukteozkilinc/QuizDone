@@ -27,6 +27,7 @@ class CategoryViewController : UIViewController{
     let db = Firestore.firestore()
     
     var categories : [Category] = []
+    var questionIndex : String?
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -34,12 +35,12 @@ class CategoryViewController : UIViewController{
         navigationItem.hidesBackButton = true
         
         loadCategories()
-        //print(categories)
     }
     
     func loadCategories(){ // Recieving categories from database
         
         db.collection("Quiz").getDocuments() { (querySnapshot, err) in
+            
             if let err = err {
                 print("There was an error retrieving from Firestore \(err)")
             } else {
@@ -88,5 +89,25 @@ class CategoryViewController : UIViewController{
         title.text = category.quizTitle
         desc.text = category.quizDesc
     }
+    
+    @IBAction func goToQuiz(_ sender: UIButton) {
+        
+        let senderId = sender.restorationIdentifier ?? "0"
+        let index : Int = Int(senderId) ?? 0
+        //let questionViewController = QuestionViewController()
+        questionIndex = categories[index].quizId
+        
+        //print(questionIndex ?? "nil")
+        
+        self.performSegue(withIdentifier: C.categorySegue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! QuestionViewController
+        destinationVC.categoryIndex = questionIndex
+        
+    }
+    
 }
+
 

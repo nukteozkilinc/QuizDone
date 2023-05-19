@@ -84,7 +84,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZy-C4-2Zq" userLabel="Logo">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="224.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="224.33333333333334"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuizDone logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dw1-ee-FTa">
                                                 <rect key="frame" x="121.66666666666669" y="37.333333333333343" width="150" height="150"/>
@@ -96,10 +96,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fz-qL-ar8" userLabel="Label">
-                                        <rect key="frame" x="0.0" y="234.66666666666663" width="393" height="364"/>
+                                        <rect key="frame" x="0.0" y="234.33333333333334" width="393" height="364.33333333333326"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Tck-Cu-2AY">
-                                                <rect key="frame" x="10" y="108.33333333333333" width="373" height="147.33333333333337"/>
+                                                <rect key="frame" x="10" y="108.66666666666664" width="373" height="147.33333333333337"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1f-0S-KlJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="21.666666666666668"/>
@@ -209,6 +209,14 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8K-bX-wsp" userLabel="History">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZL-9E-tuG">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="AJ9-DT-eX9"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Zey-hC-A7b">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                             </imageView>
@@ -230,19 +238,31 @@
                                                         <constraints>
                                                             <constraint firstItem="K6A-XR-mpO" firstAttribute="centerX" secondItem="y8K-bX-wsp" secondAttribute="centerX" id="1RQ-AG-gUL"/>
                                                             <constraint firstAttribute="height" constant="200" id="5ai-Sf-qfJ"/>
+                                                            <constraint firstItem="PZL-9E-tuG" firstAttribute="top" secondItem="y8K-bX-wsp" secondAttribute="top" id="AgY-V8-gaE"/>
+                                                            <constraint firstAttribute="bottom" secondItem="PZL-9E-tuG" secondAttribute="bottom" id="CiX-9s-7KT"/>
                                                             <constraint firstItem="Zey-hC-A7b" firstAttribute="leading" secondItem="y8K-bX-wsp" secondAttribute="leading" id="DBJ-0K-Exg"/>
                                                             <constraint firstItem="s9e-Zq-Hu7" firstAttribute="leading" secondItem="y8K-bX-wsp" secondAttribute="leading" constant="8" id="Jho-sj-U3o"/>
                                                             <constraint firstAttribute="trailing" secondItem="Zey-hC-A7b" secondAttribute="trailing" id="MeS-cQ-DbA"/>
                                                             <constraint firstItem="K6A-XR-mpO" firstAttribute="centerY" secondItem="y8K-bX-wsp" secondAttribute="centerY" id="Qm2-I3-IIi"/>
+                                                            <constraint firstItem="PZL-9E-tuG" firstAttribute="leading" secondItem="y8K-bX-wsp" secondAttribute="leading" id="fbr-Tk-LY7"/>
                                                             <constraint firstAttribute="bottom" secondItem="Zey-hC-A7b" secondAttribute="bottom" id="gVS-tu-dKh"/>
                                                             <constraint firstAttribute="bottom" secondItem="s9e-Zq-Hu7" secondAttribute="bottom" constant="4" id="gXE-37-GAy"/>
                                                             <constraint firstItem="Zey-hC-A7b" firstAttribute="top" secondItem="y8K-bX-wsp" secondAttribute="top" id="pKI-po-icg"/>
                                                             <constraint firstAttribute="trailing" secondItem="s9e-Zq-Hu7" secondAttribute="trailing" constant="8" id="q1d-vP-J5b"/>
+                                                            <constraint firstAttribute="trailing" secondItem="PZL-9E-tuG" secondAttribute="trailing" id="zN2-YP-h1T"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOz-3Y-tN3" userLabel="Turk History">
                                                         <rect key="frame" x="0.0" y="200" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifY-cP-AK8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="qnO-w3-S63"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18-march-on-turkey-all-about-canakkale-victory-day4" translatesAutoresizingMaskIntoConstraints="NO" id="uht-t5-eyt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                             </imageView>
@@ -260,7 +280,6 @@
                                                             </label>
                                                         </subviews>
                                                         <viewLayoutGuide key="safeArea" id="px7-Yv-LFE"/>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="2d4-hX-e0c"/>
                                                             <constraint firstAttribute="bottom" secondItem="uht-t5-eyt" secondAttribute="bottom" id="2u9-pG-ia3"/>
@@ -268,15 +287,27 @@
                                                             <constraint firstItem="3H2-dS-tyc" firstAttribute="centerY" secondItem="SOz-3Y-tN3" secondAttribute="centerY" id="9Ls-f1-S9n"/>
                                                             <constraint firstItem="6HS-LQ-d2U" firstAttribute="leading" secondItem="SOz-3Y-tN3" secondAttribute="leading" constant="8" id="ASI-gr-DNI"/>
                                                             <constraint firstItem="3H2-dS-tyc" firstAttribute="centerX" secondItem="SOz-3Y-tN3" secondAttribute="centerX" id="Be0-wG-Oaa"/>
+                                                            <constraint firstItem="ifY-cP-AK8" firstAttribute="top" secondItem="SOz-3Y-tN3" secondAttribute="top" id="GPr-I4-ZGu"/>
                                                             <constraint firstAttribute="trailing" secondItem="6HS-LQ-d2U" secondAttribute="trailing" constant="8" id="OQD-kD-eRk"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ifY-cP-AK8" secondAttribute="trailing" id="gRO-Ov-FOg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ifY-cP-AK8" secondAttribute="bottom" id="hYf-Y8-BqQ"/>
                                                             <constraint firstItem="uht-t5-eyt" firstAttribute="leading" secondItem="SOz-3Y-tN3" secondAttribute="leading" id="jwq-Tw-IFZ"/>
                                                             <constraint firstAttribute="trailing" secondItem="uht-t5-eyt" secondAttribute="trailing" id="lOt-56-WzR"/>
                                                             <constraint firstItem="uht-t5-eyt" firstAttribute="top" secondItem="SOz-3Y-tN3" secondAttribute="top" id="pY4-NF-RIc"/>
+                                                            <constraint firstItem="ifY-cP-AK8" firstAttribute="leading" secondItem="SOz-3Y-tN3" secondAttribute="leading" id="rdL-pu-ke6"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZF-yJ-qyy" userLabel="Geo">
                                                         <rect key="frame" x="0.0" y="400" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvd-kJ-o6o">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="3sR-sb-2pR"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oup_58381-705x435" translatesAutoresizingMaskIntoConstraints="NO" id="Ugl-PI-WI3">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                             </imageView>
@@ -294,15 +325,18 @@
                                                             </label>
                                                         </subviews>
                                                         <viewLayoutGuide key="safeArea" id="2kw-YL-9sG"/>
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="Ydv-Nm-1sG" secondAttribute="bottom" constant="4" id="3ls-e5-VXr"/>
                                                             <constraint firstAttribute="trailing" secondItem="Ydv-Nm-1sG" secondAttribute="trailing" constant="8" id="7aI-F8-pOf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fvd-kJ-o6o" secondAttribute="trailing" id="85I-gJ-Cot"/>
                                                             <constraint firstAttribute="trailing" secondItem="Ugl-PI-WI3" secondAttribute="trailing" id="9RS-3G-kEL"/>
                                                             <constraint firstItem="Ydv-Nm-1sG" firstAttribute="leading" secondItem="AZF-yJ-qyy" secondAttribute="leading" constant="8" id="CGT-fy-ncw"/>
                                                             <constraint firstItem="Ugl-PI-WI3" firstAttribute="leading" secondItem="AZF-yJ-qyy" secondAttribute="leading" id="DwG-40-N8t"/>
+                                                            <constraint firstAttribute="bottom" secondItem="fvd-kJ-o6o" secondAttribute="bottom" id="E4s-5a-L4A"/>
                                                             <constraint firstItem="Ugl-PI-WI3" firstAttribute="top" secondItem="AZF-yJ-qyy" secondAttribute="top" id="Q4l-ku-Qom"/>
                                                             <constraint firstItem="20w-ul-wcC" firstAttribute="centerX" secondItem="AZF-yJ-qyy" secondAttribute="centerX" id="Shy-zH-2Q7"/>
+                                                            <constraint firstItem="fvd-kJ-o6o" firstAttribute="leading" secondItem="AZF-yJ-qyy" secondAttribute="leading" id="XjX-2B-taC"/>
+                                                            <constraint firstItem="fvd-kJ-o6o" firstAttribute="top" secondItem="AZF-yJ-qyy" secondAttribute="top" id="Yo4-U3-A1P"/>
                                                             <constraint firstAttribute="height" constant="200" id="oMi-3M-kZu"/>
                                                             <constraint firstAttribute="bottom" secondItem="Ugl-PI-WI3" secondAttribute="bottom" id="x17-PS-o3t"/>
                                                             <constraint firstItem="20w-ul-wcC" firstAttribute="centerY" secondItem="AZF-yJ-qyy" secondAttribute="centerY" id="xvY-Wk-Cj3"/>
@@ -311,15 +345,23 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQM-0V-t7S" userLabel="Capital Cities">
                                                         <rect key="frame" x="0.0" y="600" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5R-Ge-UPa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="aL7-bk-VhF"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XGI-w6-tTJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                            </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to7-7c-r7v">
                                                                 <rect key="frame" x="158.33333333333334" y="82" width="76.666666666666657" height="36"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XGI-w6-tTJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
-                                                            </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnT-oK-txP">
                                                                 <rect key="frame" x="8" y="178" width="377" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -329,11 +371,15 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                                                         <constraints>
+                                                            <constraint firstItem="l5R-Ge-UPa" firstAttribute="top" secondItem="iQM-0V-t7S" secondAttribute="top" id="1VN-XU-Kwg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="l5R-Ge-UPa" secondAttribute="bottom" id="8HS-uv-T0L"/>
                                                             <constraint firstItem="XGI-w6-tTJ" firstAttribute="leading" secondItem="iQM-0V-t7S" secondAttribute="leading" id="9BX-iN-DQe"/>
+                                                            <constraint firstItem="l5R-Ge-UPa" firstAttribute="leading" secondItem="iQM-0V-t7S" secondAttribute="leading" id="CuT-ql-BpF"/>
                                                             <constraint firstAttribute="bottom" secondItem="XGI-w6-tTJ" secondAttribute="bottom" id="Dqi-3A-2QD"/>
                                                             <constraint firstAttribute="bottom" secondItem="bnT-oK-txP" secondAttribute="bottom" constant="4" id="ES2-vl-pVr"/>
                                                             <constraint firstAttribute="trailing" secondItem="bnT-oK-txP" secondAttribute="trailing" constant="8" id="L1F-ki-WHv"/>
                                                             <constraint firstAttribute="height" constant="200" id="TkX-YM-NYI"/>
+                                                            <constraint firstAttribute="trailing" secondItem="l5R-Ge-UPa" secondAttribute="trailing" id="Y9t-gj-7aj"/>
                                                             <constraint firstItem="to7-7c-r7v" firstAttribute="centerX" secondItem="iQM-0V-t7S" secondAttribute="centerX" id="ZyI-cd-qXc"/>
                                                             <constraint firstItem="bnT-oK-txP" firstAttribute="leading" secondItem="iQM-0V-t7S" secondAttribute="leading" constant="8" id="fmL-Wu-BuP"/>
                                                             <constraint firstAttribute="trailing" secondItem="XGI-w6-tTJ" secondAttribute="trailing" id="r20-X2-p53"/>
@@ -344,6 +390,14 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tI3-v2-eRS" userLabel="Science and Techno">
                                                         <rect key="frame" x="0.0" y="800" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2K-rx-5LP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="fTC-9d-YLq"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zm5-gZ-R20">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                             </imageView>
@@ -362,21 +416,33 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="A2K-rx-5LP" secondAttribute="trailing" id="Cu0-1B-fNJ"/>
                                                             <constraint firstItem="d6G-gx-cxw" firstAttribute="leading" secondItem="tI3-v2-eRS" secondAttribute="leading" constant="8" id="DGw-fM-DrB"/>
                                                             <constraint firstItem="Qlx-ry-qoQ" firstAttribute="centerY" secondItem="tI3-v2-eRS" secondAttribute="centerY" id="Dxr-pH-3Kx"/>
                                                             <constraint firstItem="Qlx-ry-qoQ" firstAttribute="centerX" secondItem="tI3-v2-eRS" secondAttribute="centerX" id="Mk7-Eu-Xbm"/>
                                                             <constraint firstAttribute="trailing" secondItem="d6G-gx-cxw" secondAttribute="trailing" constant="8" id="OZS-Hh-usJ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="A2K-rx-5LP" secondAttribute="bottom" id="Ttk-YG-UsG"/>
+                                                            <constraint firstItem="A2K-rx-5LP" firstAttribute="leading" secondItem="tI3-v2-eRS" secondAttribute="leading" id="UeG-IG-Gbe"/>
                                                             <constraint firstItem="Zm5-gZ-R20" firstAttribute="leading" secondItem="tI3-v2-eRS" secondAttribute="leading" id="Ye3-DV-Jh3"/>
                                                             <constraint firstAttribute="trailing" secondItem="Zm5-gZ-R20" secondAttribute="trailing" id="Yfh-bJ-Cbx"/>
                                                             <constraint firstItem="Zm5-gZ-R20" firstAttribute="top" secondItem="tI3-v2-eRS" secondAttribute="top" id="cyk-bH-C9Y"/>
                                                             <constraint firstAttribute="height" constant="200" id="klU-eK-Kr2"/>
                                                             <constraint firstAttribute="bottom" secondItem="Zm5-gZ-R20" secondAttribute="bottom" id="lo4-Sw-U6m"/>
+                                                            <constraint firstItem="A2K-rx-5LP" firstAttribute="top" secondItem="tI3-v2-eRS" secondAttribute="top" id="m2E-uB-57x"/>
                                                             <constraint firstAttribute="bottom" secondItem="d6G-gx-cxw" secondAttribute="bottom" constant="4" id="q12-R5-Rfn"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRD-RA-blN" userLabel="General Knowledge">
                                                         <rect key="frame" x="0.0" y="1000" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuJ-s2-dXv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="KdZ-TU-WUI"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-Cu-gRo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                             </imageView>
@@ -395,8 +461,11 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="xuJ-s2-dXv" secondAttribute="bottom" id="0mY-Sd-Orp"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xuJ-s2-dXv" secondAttribute="trailing" id="CaG-vb-iKw"/>
                                                             <constraint firstAttribute="bottom" secondItem="Dg0-Cu-gRo" secondAttribute="bottom" id="F4c-Uv-Iiz"/>
                                                             <constraint firstItem="GBf-zJ-rrb" firstAttribute="leading" secondItem="GRD-RA-blN" secondAttribute="leading" constant="8" id="JV9-wT-jJn"/>
+                                                            <constraint firstItem="xuJ-s2-dXv" firstAttribute="leading" secondItem="GRD-RA-blN" secondAttribute="leading" id="KaB-jz-OCO"/>
                                                             <constraint firstItem="vLE-Yg-8Jb" firstAttribute="centerX" secondItem="GRD-RA-blN" secondAttribute="centerX" id="NIq-c9-EM0"/>
                                                             <constraint firstAttribute="height" constant="200" id="Pq5-sb-WRK"/>
                                                             <constraint firstAttribute="bottom" secondItem="GBf-zJ-rrb" secondAttribute="bottom" constant="4" id="Wcl-R2-Elk"/>
@@ -404,12 +473,21 @@
                                                             <constraint firstAttribute="trailing" secondItem="Dg0-Cu-gRo" secondAttribute="trailing" id="kBU-69-3Tt"/>
                                                             <constraint firstItem="vLE-Yg-8Jb" firstAttribute="centerY" secondItem="GRD-RA-blN" secondAttribute="centerY" id="pWr-YC-C5c"/>
                                                             <constraint firstItem="Dg0-Cu-gRo" firstAttribute="leading" secondItem="GRD-RA-blN" secondAttribute="leading" id="qqT-M2-OIC"/>
+                                                            <constraint firstItem="xuJ-s2-dXv" firstAttribute="top" secondItem="GRD-RA-blN" secondAttribute="top" id="rC6-dM-WnF"/>
                                                             <constraint firstAttribute="trailing" secondItem="GBf-zJ-rrb" secondAttribute="trailing" constant="8" id="sC3-zM-RwC"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CuY-b1-Q9N" userLabel="Sports">
                                                         <rect key="frame" x="0.0" y="1200" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJa-d4-YTt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="198"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="Y3n-tq-ab3"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p75-5e-wF2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                             </imageView>
@@ -430,19 +508,31 @@
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="6zA-DE-Qud" secondAttribute="bottom" constant="4" id="3CA-kK-Yz4"/>
                                                             <constraint firstItem="bma-Co-Ddl" firstAttribute="centerX" secondItem="CuY-b1-Q9N" secondAttribute="centerX" id="52r-tC-22r"/>
+                                                            <constraint firstItem="uJa-d4-YTt" firstAttribute="leading" secondItem="CuY-b1-Q9N" secondAttribute="leading" id="A7S-LS-OVA"/>
                                                             <constraint firstItem="p75-5e-wF2" firstAttribute="leading" secondItem="CuY-b1-Q9N" secondAttribute="leading" id="Ana-Jx-bbN"/>
                                                             <constraint firstItem="bma-Co-Ddl" firstAttribute="centerY" secondItem="CuY-b1-Q9N" secondAttribute="centerY" id="E66-pe-MvQ"/>
                                                             <constraint firstAttribute="height" constant="200" id="Elu-FC-S30"/>
                                                             <constraint firstItem="p75-5e-wF2" firstAttribute="top" secondItem="CuY-b1-Q9N" secondAttribute="top" id="Le4-bq-xWC"/>
                                                             <constraint firstAttribute="trailing" secondItem="p75-5e-wF2" secondAttribute="trailing" id="TjG-VT-Wnm"/>
                                                             <constraint firstAttribute="bottom" secondItem="p75-5e-wF2" secondAttribute="bottom" id="fWU-eS-r59"/>
+                                                            <constraint firstItem="uJa-d4-YTt" firstAttribute="top" secondItem="CuY-b1-Q9N" secondAttribute="top" id="i2d-sX-UEP"/>
+                                                            <constraint firstAttribute="bottom" secondItem="uJa-d4-YTt" secondAttribute="bottom" constant="2" id="kLp-Zj-o96"/>
                                                             <constraint firstAttribute="trailing" secondItem="6zA-DE-Qud" secondAttribute="trailing" constant="8" id="nj5-kp-IJf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uJa-d4-YTt" secondAttribute="trailing" id="uzB-Oe-EVQ"/>
                                                             <constraint firstItem="6zA-DE-Qud" firstAttribute="leading" secondItem="CuY-b1-Q9N" secondAttribute="leading" constant="8" id="wfq-bE-J67"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-a2-q7J" userLabel="Movies">
                                                         <rect key="frame" x="0.0" y="1400" width="393" height="200"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBc-A7-prh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="goToQuiz:" destination="9aG-sS-aIV" eventType="touchUpInside" id="ZV0-ww-Zi2"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wbJ-sQ-Hxd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
                                                             </imageView>
@@ -462,9 +552,13 @@
                                                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="wbJ-sQ-Hxd" secondAttribute="trailing" id="4TA-R2-JW5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ZBc-A7-prh" secondAttribute="bottom" id="5mr-Xh-NtS"/>
+                                                            <constraint firstItem="ZBc-A7-prh" firstAttribute="top" secondItem="Z2z-a2-q7J" secondAttribute="top" id="EKE-fc-olX"/>
                                                             <constraint firstAttribute="height" constant="200" id="GIT-Zl-2RI"/>
                                                             <constraint firstItem="Kxo-SF-ann" firstAttribute="centerY" secondItem="Z2z-a2-q7J" secondAttribute="centerY" id="OHX-5m-aOw"/>
                                                             <constraint firstItem="wbJ-sQ-Hxd" firstAttribute="leading" secondItem="Z2z-a2-q7J" secondAttribute="leading" id="PHp-5k-X3S"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ZBc-A7-prh" secondAttribute="trailing" id="Xkf-NK-axg"/>
+                                                            <constraint firstItem="ZBc-A7-prh" firstAttribute="leading" secondItem="Z2z-a2-q7J" secondAttribute="leading" id="ZHg-h1-cmJ"/>
                                                             <constraint firstAttribute="bottom" secondItem="wbJ-sQ-Hxd" secondAttribute="bottom" id="cnY-yb-1EH"/>
                                                             <constraint firstItem="rSb-31-gWi" firstAttribute="leading" secondItem="Z2z-a2-q7J" secondAttribute="leading" constant="8" id="dzF-rD-yfG"/>
                                                             <constraint firstItem="Kxo-SF-ann" firstAttribute="centerX" secondItem="Z2z-a2-q7J" secondAttribute="centerX" id="izz-J8-GcG"/>
@@ -529,17 +623,17 @@
                         <outlet property="title6" destination="vLE-Yg-8Jb" id="Xxg-My-qGZ"/>
                         <outlet property="title7" destination="bma-Co-Ddl" id="HJr-6S-9aj"/>
                         <outlet property="title8" destination="Kxo-SF-ann" id="6vQ-R7-ipz"/>
-                        <segue destination="f0i-Ml-tia" kind="show" id="68a-bW-3MC"/>
+                        <segue destination="f0i-Ml-tia" kind="show" identifier="categoryToQuiz" id="68a-bW-3MC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ab6-hw-ere" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2907.6335877862593" y="28.87323943661972"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="qAb-ch-NNX">
             <objects>
-                <viewController id="f0i-Ml-tia" sceneMemberID="viewController">
+                <viewController id="f0i-Ml-tia" customClass="QuestionViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iTr-iV-d6y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -605,6 +699,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E8g-0o-8vL"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="UIy-RD-7NC" id="TiX-44-B4E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtj-4Q-X5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -764,12 +861,6 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -19,6 +19,8 @@
 		8BB81E3B2A1005B600CACE5B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3A2A1005B600CACE5B /* RegisterViewController.swift */; };
 		8BB81E3D2A100D5000CACE5B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */; };
 		8BB81E3F2A10224500CACE5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3E2A10224500CACE5B /* LoginViewController.swift */; };
+		8BB9FD452A14EA73002B2FAD /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9FD442A14EA73002B2FAD /* QuestionViewController.swift */; };
+		8BB9FD472A14EDD5002B2FAD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9FD462A14EDD5002B2FAD /* Question.swift */; };
 		8BFABAA72A13D633001C48A2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFABAA62A13D633001C48A2 /* Category.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		8BB81E3A2A1005B600CACE5B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		8BB81E3E2A10224500CACE5B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8BB9FD442A14EA73002B2FAD /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		8BB9FD462A14EDD5002B2FAD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		8BFABAA62A13D633001C48A2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A222D1014F7FB10077431E39 /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,7 @@
 			children = (
 				8B40E6F129F96FD1006DC397 /* AppDelegate.swift */,
 				8B40E6F329F96FD1006DC397 /* SceneDelegate.swift */,
+				8BFABAA82A13D639001C48A2 /* Model */,
 				8B40E70629F97038006DC397 /* Controller */,
 				8B40E70529F9702F006DC397 /* View */,
 				8B40E6FA29F96FD2006DC397 /* Assets.xcassets */,
@@ -84,8 +89,6 @@
 				8B40E6FC29F96FD2006DC397 /* LaunchScreen.storyboard */,
 				8B40E6FF29F96FD2006DC397 /* Info.plist */,
 				8B81A1BB2A12388C005047AA /* C.swift */,
-				8BFABAA62A13D633001C48A2 /* Category.swift */,
-				8BFABAA82A13D639001C48A2 /* Model */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -105,6 +108,7 @@
 				8BB81E3A2A1005B600CACE5B /* RegisterViewController.swift */,
 				8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */,
 				8BB81E3E2A10224500CACE5B /* LoginViewController.swift */,
+				8BB9FD442A14EA73002B2FAD /* QuestionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +116,8 @@
 		8BFABAA82A13D639001C48A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BFABAA62A13D633001C48A2 /* Category.swift */,
+				8BB9FD462A14EDD5002B2FAD /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,7 +260,9 @@
 				8B40E6F629F96FD1006DC397 /* ViewController.swift in Sources */,
 				8B40E6F229F96FD1006DC397 /* AppDelegate.swift in Sources */,
 				8B81A1BC2A12388C005047AA /* C.swift in Sources */,
+				8BB9FD472A14EDD5002B2FAD /* Question.swift in Sources */,
 				8B40E6F429F96FD1006DC397 /* SceneDelegate.swift in Sources */,
+				8BB9FD452A14EA73002B2FAD /* QuestionViewController.swift in Sources */,
 				8BB81E3B2A1005B600CACE5B /* RegisterViewController.swift in Sources */,
 				8BFABAA72A13D633001C48A2 /* Category.swift in Sources */,
 			);
