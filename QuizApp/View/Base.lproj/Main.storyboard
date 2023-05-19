@@ -787,6 +787,17 @@
                                                     <action selector="loginPressed:" destination="nF0-K4-SNH" eventType="touchUpInside" id="H6A-7X-A5e"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqF-Lh-gNO">
+                                                <rect key="frame" x="156" y="157" width="80" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="googleAuthPressed:" destination="nF0-K4-SNH" eventType="touchUpInside" id="gDr-LN-MOr"/>
+                                                    <action selector="loginPressed:" destination="nF0-K4-SNH" eventType="touchUpInside" id="ahZ-lg-xTu"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="99a-xH-6ne" firstAttribute="centerY" secondItem="3oj-AZ-cju" secondAttribute="centerY" id="4Ps-0b-JJH"/>
