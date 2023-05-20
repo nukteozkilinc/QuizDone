@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "20211228_Top_30_Movies_WP_00a-1024x536.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "20211228_Top_30_Movies_WP_00a-1024x536@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "20211228_Top_30_Movies_WP_00a-1024x536@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
