@@ -21,6 +21,7 @@
 		8BB81E3F2A10224500CACE5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3E2A10224500CACE5B /* LoginViewController.swift */; };
 		8BB9FD452A14EA73002B2FAD /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9FD442A14EA73002B2FAD /* QuestionViewController.swift */; };
 		8BB9FD472A14EDD5002B2FAD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB9FD462A14EDD5002B2FAD /* Question.swift */; };
+		8BBEA4AD2A1CF3D400F40422 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBEA4AC2A1CF3D400F40422 /* User.swift */; };
 		8BFABAA72A13D633001C48A2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFABAA62A13D633001C48A2 /* Category.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		8BB81E3E2A10224500CACE5B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8BB9FD442A14EA73002B2FAD /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		8BB9FD462A14EDD5002B2FAD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		8BBEA4AC2A1CF3D400F40422 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8BFABAA62A13D633001C48A2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A222D1014F7FB10077431E39 /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 			children = (
 				8BFABAA62A13D633001C48A2 /* Category.swift */,
 				8BB9FD462A14EDD5002B2FAD /* Question.swift */,
+				8BBEA4AC2A1CF3D400F40422 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				8BB9FD452A14EA73002B2FAD /* QuestionViewController.swift in Sources */,
 				8BB81E3B2A1005B600CACE5B /* RegisterViewController.swift in Sources */,
 				8BFABAA72A13D633001C48A2 /* Category.swift in Sources */,
+				8BBEA4AD2A1CF3D400F40422 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

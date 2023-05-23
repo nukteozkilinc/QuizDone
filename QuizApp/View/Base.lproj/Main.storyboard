@@ -707,6 +707,32 @@
             </objects>
             <point key="canvasLocation" x="3914" y="29"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dyr-Jb-gu7">
+            <objects>
+                <viewController id="VYT-An-KQX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gx3-gk-fJC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-codioful-(formerly-gradienta)-7130555" translatesAutoresizingMaskIntoConstraints="NO" id="ytZ-cb-sFf">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KVR-0Q-Dyd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ytZ-cb-sFf" firstAttribute="top" secondItem="gx3-gk-fJC" secondAttribute="top" id="5or-BI-Sha"/>
+                            <constraint firstAttribute="bottom" secondItem="ytZ-cb-sFf" secondAttribute="bottom" id="CLr-Ab-cEq"/>
+                            <constraint firstItem="ytZ-cb-sFf" firstAttribute="leading" secondItem="gx3-gk-fJC" secondAttribute="leading" id="b4t-EV-q8X"/>
+                            <constraint firstAttribute="trailing" secondItem="ytZ-cb-sFf" secondAttribute="trailing" id="l9o-Aq-OZu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLK-Ii-DVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4732.06106870229" y="35.211267605633807"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="yXc-fq-jgL">
             <objects>
@@ -792,10 +818,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqF-Lh-gNO">
-                                                <rect key="frame" x="170" y="115" width="53" height="44"/>
+                                                <rect key="frame" x="177" y="107" width="39" height="37"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="T1y-ee-Xbc"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="53" id="usu-2h-bjA"/>
+                                                    <constraint firstAttribute="height" constant="37" id="T1y-ee-Xbc"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="39" id="usu-2h-bjA"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title=" Login with Google" image="google.png">
@@ -811,8 +837,8 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="sqF-Lh-gNO" firstAttribute="centerX" secondItem="99a-xH-6ne" secondAttribute="centerX" id="9FO-Xi-dog"/>
-                                            <constraint firstAttribute="bottom" secondItem="sqF-Lh-gNO" secondAttribute="bottom" constant="63.333333333333314" id="I7f-AU-xAh"/>
-                                            <constraint firstItem="sqF-Lh-gNO" firstAttribute="top" secondItem="99a-xH-6ne" secondAttribute="bottom" constant="15.333333333333343" id="J66-Ez-Asm"/>
+                                            <constraint firstAttribute="bottom" secondItem="sqF-Lh-gNO" secondAttribute="bottom" constant="78.333333333333314" id="I7f-AU-xAh"/>
+                                            <constraint firstItem="sqF-Lh-gNO" firstAttribute="top" secondItem="99a-xH-6ne" secondAttribute="bottom" constant="7.3333333333333428" id="J66-Ez-Asm"/>
                                             <constraint firstItem="sqF-Lh-gNO" firstAttribute="centerX" secondItem="3oj-AZ-cju" secondAttribute="centerX" id="ZKS-WP-gWP"/>
                                         </constraints>
                                     </view>

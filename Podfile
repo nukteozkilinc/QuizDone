@@ -7,5 +7,8 @@ target 'QuizApp' do
     pod 'FirebaseAuth'
     pod 'FirebaseFirestore'
     pod 'GoogleSignIn'
+    pod 'Firebase'
+    pod 'Firebase/Analytics’
+    pod 'Firebase/Database’
     
 end
