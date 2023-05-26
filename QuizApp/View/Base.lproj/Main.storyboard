@@ -655,10 +655,17 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="fMt-4S-ieS"/>
                                         </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" systemColor="labelColor"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                            <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="aPP-Ve-gQr"/>
+                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="CvW-gD-e61"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPH-do-yPi">
@@ -667,9 +674,13 @@
                                             <constraint firstAttribute="height" constant="80" id="W7S-Eg-eA2"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="9N7-Lo-7ue"/>
+                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="EdX-mx-GTj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIW-EE-Jqb">
@@ -678,9 +689,13 @@
                                             <constraint firstAttribute="height" constant="80" id="Ssp-pG-FRh"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="cvm-Ma-Tbm"/>
+                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="pMa-ej-rRI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrs-Km-t5b">
@@ -689,9 +704,13 @@
                                             <constraint firstAttribute="height" constant="80" id="feA-zv-6yy"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Button">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
-                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="XvR-5C-1vv"/>
+                                            <action selector="pressAnswer:" destination="f0i-Ml-tia" eventType="touchUpInside" id="TbP-ap-1fQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -923,6 +942,12 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

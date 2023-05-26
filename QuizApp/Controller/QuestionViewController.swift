@@ -22,10 +22,8 @@ class QuestionViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ref = Database.database(url: "https://quizdone-e2e34-default-rtdb.firebaseio.com/").reference()
-        
-        //questionLabel.text = categoryIndex
+       
         getData()
-        
     }
     
     func getData(){
@@ -48,15 +46,6 @@ class QuestionViewController : UIViewController{
         }
     }
     
-    func updateUI(){
-        var answerTitles = takingAnswerTitles()
-        questionLabel.text = questionsArray[questionCount].title
-        firstButton.setTitle(answerTitles[0], for: .normal)
-        secondButton.setTitle(answerTitles[1], for: .normal)
-        thirdButton.setTitle(answerTitles[2], for: .normal)
-        fourthButton.setTitle(answerTitles[3], for: .normal)
-    }
-    
     func takingAnswerTitles() -> [String]{
         var answerTitles : [String] = []
         for answers in questionsArray[questionCount].options.keys{
@@ -67,22 +56,11 @@ class QuestionViewController : UIViewController{
     
     func answerChecked() -> [Bool]{
         var checkedar : [Bool] = []
-        var answerTitles = takingAnswerTitles()
+        let answerTitles = takingAnswerTitles()
         for index in answerTitles{
             if let checked = questionsArray[questionCount].options[index]{
                 checkedar.append(checked)
-                /*if checked == true{
-                    //print("true")
-                    
-                }else{
-                    //("false")
-                    //sender.backgroundColor = UIColor.red
-                }*/
             }
-            //firstButton.setTitle(questionsArray[questionCount].title, for: .normal)
-            //for (answer , checked) in questionsArray[questionCount].options{
-            //       print("answer \(answer) , checked \(checked)")
-            //}
         }
         return checkedar
     }
@@ -94,6 +72,7 @@ class QuestionViewController : UIViewController{
         
         if check[myAnswer] == true{
                 print("true")
+            
             sender.backgroundColor = UIColor.green
         }else{
             print("false")
@@ -102,13 +81,24 @@ class QuestionViewController : UIViewController{
         
             if questionCount != questionsArray.count - 1 {
                 questionCount = questionCount + 1
-                updateUI()
-                
-                
             }else{
                 print("Bitti")
             }
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
+    
+    @objc func updateUI(){
+        let answerTitles = takingAnswerTitles()
+        questionLabel.text = questionsArray[questionCount].title
+        firstButton.setTitle(answerTitles[0], for: .normal)
+        secondButton.setTitle(answerTitles[1], for: .normal)
+        thirdButton.setTitle(answerTitles[2], for: .normal)
+        fourthButton.setTitle(answerTitles[3], for: .normal)
+        firstButton.backgroundColor = UIColor.clear
+        secondButton.backgroundColor = UIColor.clear
+        thirdButton.backgroundColor = UIColor.clear
+        fourthButton.backgroundColor = UIColor.clear
     }
+}
 
 
