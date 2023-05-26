@@ -11,12 +11,14 @@ class QuestionViewController : UIViewController{
     @IBOutlet weak var secondButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
     @IBOutlet weak var fourthButton: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     let db = Firestore.firestore()
     var categoryIndex : String?
     var ref: DatabaseReference!
     var questionsArray : [Question] = []
     var questionCount : Int = 0
+    var score : Int = 0
     
     
     override func viewDidLoad() {
@@ -73,6 +75,7 @@ class QuestionViewController : UIViewController{
         if check[myAnswer] == true{
                 print("true")
             
+            score = score + 1
             sender.backgroundColor = UIColor.green
         }else{
             print("false")
@@ -82,7 +85,7 @@ class QuestionViewController : UIViewController{
             if questionCount != questionsArray.count - 1 {
                 questionCount = questionCount + 1
             }else{
-                print("Bitti")
+                self.performSegue(withIdentifier: "QuizToScore", sender: self)
             }
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
@@ -98,6 +101,7 @@ class QuestionViewController : UIViewController{
         secondButton.backgroundColor = UIColor.clear
         thirdButton.backgroundColor = UIColor.clear
         fourthButton.backgroundColor = UIColor.clear
+        scoreLabel.text = "Score : \(score)"
     }
 }
 

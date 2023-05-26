@@ -16,6 +16,7 @@
 		8B40E6FE29F96FD2006DC397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B40E6FC29F96FD2006DC397 /* LaunchScreen.storyboard */; };
 		8B81A1BC2A12388C005047AA /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81A1BB2A12388C005047AA /* C.swift */; };
 		8BAE2FF12A0E275200E89A81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BAE2FF02A0E275200E89A81 /* GoogleService-Info.plist */; };
+		8BB08CFB2A20E52400133950 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB08CFA2A20E52400133950 /* ScoreViewController.swift */; };
 		8BB81E3B2A1005B600CACE5B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3A2A1005B600CACE5B /* RegisterViewController.swift */; };
 		8BB81E3D2A100D5000CACE5B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */; };
 		8BB81E3F2A10224500CACE5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB81E3E2A10224500CACE5B /* LoginViewController.swift */; };
@@ -38,6 +39,7 @@
 		8B40E6FF29F96FD2006DC397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B81A1BB2A12388C005047AA /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		8BAE2FF02A0E275200E89A81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BB08CFA2A20E52400133950 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		8BB81E3A2A1005B600CACE5B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		8BB81E3E2A10224500CACE5B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				8BB81E3C2A100D5000CACE5B /* CategoryViewController.swift */,
 				8BB81E3E2A10224500CACE5B /* LoginViewController.swift */,
 				8BB9FD442A14EA73002B2FAD /* QuestionViewController.swift */,
+				8BB08CFA2A20E52400133950 /* ScoreViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				8BB81E3B2A1005B600CACE5B /* RegisterViewController.swift in Sources */,
 				8BFABAA72A13D633001C48A2 /* Category.swift in Sources */,
 				8BBEA4AD2A1CF3D400F40422 /* User.swift in Sources */,
+				8BB08CFB2A20E52400133950 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
