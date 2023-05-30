@@ -23,7 +23,7 @@ class QuestionViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.ref = Database.database(url: "https://quizdone-e2e34-default-rtdb.firebaseio.com/").reference()
+        self.ref = Database.database(url: C.RealtimeDatabase.url).reference()
        
         getData()
     }
@@ -102,6 +102,11 @@ class QuestionViewController : UIViewController{
         thirdButton.backgroundColor = UIColor.clear
         fourthButton.backgroundColor = UIColor.clear
         scoreLabel.text = "Score : \(score)"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ScoreViewController
+        destinationVC.score = score
     }
 }
 

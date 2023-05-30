@@ -32,6 +32,7 @@ class CategoryViewController : UIViewController{
         super.viewDidLoad()
     
         title = "QuizDone"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToAdd))
         navigationItem.hidesBackButton = true
         
         loadCategories()
@@ -103,11 +104,16 @@ class CategoryViewController : UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! QuestionViewController
-        destinationVC.categoryIndex = questionIndex
         
+        if segue.identifier == C.categorySegue{
+            let destinationVC = segue.destination as! QuestionViewController
+            destinationVC.categoryIndex = questionIndex
+        }
     }
     
+    @objc func goToAdd(){
+        self.performSegue(withIdentifier: C.addSegue, sender: self)
+    }
 }
 
 
