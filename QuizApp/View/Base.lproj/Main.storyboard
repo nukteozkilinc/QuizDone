@@ -1027,7 +1027,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                 <connections>
-                                                    <action selector="pressedCancel:" destination="hvc-uN-Pfh" eventType="touchUpInside" id="kxB-ph-jbO"/>
+                                                    <action selector="pressedSave:" destination="hvc-uN-Pfh" eventType="touchUpInside" id="4bl-03-Pc6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sa2-Wq-xIg">
@@ -1070,7 +1070,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsH-2h-frb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4339.6946564885493" y="-767.6056338028169"/>
+            <point key="canvasLocation" x="3976" y="-756"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="yXc-fq-jgL">
@@ -1144,13 +1144,16 @@
                                         <rect key="frame" x="0.0" y="492.66666666666657" width="393" height="222.33333333333331"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99a-xH-6ne">
-                                                <rect key="frame" x="152.33333333333334" y="57" width="88.333333333333343" height="42.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="38.666666666666742" width="393" height="61"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="61" id="KoZ-Iz-0Fv"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Login"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Login">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="24"/>
-                                                    <color key="baseBackgroundColor" red="0.70192155934343436" green="0.22227085275700675" blue="0.6761673882096757" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                                    <color key="baseBackgroundColor" red="0.63921570780000003" green="0.34117650989999998" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="loginPressed:" destination="nF0-K4-SNH" eventType="touchUpInside" id="H6A-7X-A5e"/>
@@ -1175,7 +1178,9 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="99a-xH-6ne" firstAttribute="leading" secondItem="3oj-AZ-cju" secondAttribute="leading" id="05H-VB-UQ5"/>
                                             <constraint firstItem="sqF-Lh-gNO" firstAttribute="centerX" secondItem="99a-xH-6ne" secondAttribute="centerX" id="9FO-Xi-dog"/>
+                                            <constraint firstAttribute="trailing" secondItem="99a-xH-6ne" secondAttribute="trailing" id="Ht3-s0-ZeS"/>
                                             <constraint firstAttribute="bottom" secondItem="sqF-Lh-gNO" secondAttribute="bottom" constant="78.333333333333314" id="I7f-AU-xAh"/>
                                             <constraint firstItem="sqF-Lh-gNO" firstAttribute="top" secondItem="99a-xH-6ne" secondAttribute="bottom" constant="7.3333333333333428" id="J66-Ez-Asm"/>
                                             <constraint firstItem="sqF-Lh-gNO" firstAttribute="centerX" secondItem="3oj-AZ-cju" secondAttribute="centerX" id="ZKS-WP-gWP"/>
@@ -1228,7 +1233,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EHK-n8-yCu"/>
+        <segue reference="6Eb-dR-sQ6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="18-march-on-turkey-all-about-canakkale-victory-day4" width="165" height="82.333335876464844"/>

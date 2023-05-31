@@ -14,6 +14,7 @@ class AddQuestionViewController: ViewController {
     
     @IBOutlet weak var selectCategoryBtn: UIButton!
     @IBOutlet var categoryCollection: [UIButton]!
+    var subjectId : String!
     
     var ref: DatabaseReference!
     
@@ -27,16 +28,30 @@ class AddQuestionViewController: ViewController {
         }
     }
     
+    func writeQuestion() -> Question{
+        var title = questionLabel.text ?? "nil"
+        var optionOne = optionOne.text ?? "nil"
+        var optionTwo = optionTwo.text ?? "nil"
+        var optionThree = optionThree.text ?? "nil"
+        var optionFour = optionFour.text ?? "nil"
+        var question = Question(title: title, subject: subjectId, options: [optionOne : true,optionTwo : false,optionThree : false,optionFour : false])
+        return question
+    }
+    
     @IBAction func pressedSave(_ sender: UIButton) {
-        addQuestion()
+       // addQuestion()
+        let writeQuestion = writeQuestion()
+        addQuestion(question: writeQuestion)
     }
     
     
     @IBAction func pressedCancel(_ sender: UIButton) {
     }
     
-    func addQuestion(){
-        
+    func addQuestion(question : Question){
+        print("Burda")
+        self.ref.child("questions").childByAutoId().setValue(["title" : question.title, "subject" : question.subject, "options" : question.options])
+
     }
     
     @IBAction func selectCategoryPressed(_ sender: UIButton) {
@@ -52,7 +67,7 @@ class AddQuestionViewController: ViewController {
     @IBAction func categoryPressed(_ sender: UIButton) {
         if let btnLabel = sender.titleLabel?.text{
             if btnLabel == "History"{
-                print("d11")
+                subjectId = "d11"
             }
             
         }
