@@ -19,6 +19,7 @@ class QuestionViewController : UIViewController{
     var questionsArray : [Question] = []
     var questionCount : Int = 0
     var score : Int = 0
+    var countQuestions : Int = 0
     
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class QuestionViewController : UIViewController{
                     let question = Question(title: title, subject: subject, options: options)
                     self.questionsArray.append(question)
                 }
+                self.countQuestions = self.countQuestions + 1
             }
             self.updateUI()
         }) { error in
@@ -104,6 +106,7 @@ class QuestionViewController : UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! ScoreViewController
         destinationVC.score = score
+        destinationVC.count = countQuestions
     }
 }
 
