@@ -29,27 +29,62 @@ class AddQuestionViewController: ViewController {
     }
     
     func writeQuestion() -> Question{
-        var title = questionLabel.text ?? "nil"
-        var optionOne = optionOne.text ?? "nil"
-        var optionTwo = optionTwo.text ?? "nil"
-        var optionThree = optionThree.text ?? "nil"
-        var optionFour = optionFour.text ?? "nil"
-        var question = Question(title: title, subject: subjectId, options: [optionOne : true,optionTwo : false,optionThree : false,optionFour : false])
+        let title = questionLabel.text ?? "nil"
+        let optionOne = optionOne.text ?? "nil"
+        let optionTwo = optionTwo.text ?? "nil"
+        let optionThree = optionThree.text ?? "nil"
+        let optionFour = optionFour.text ?? "nil"
+        let question = Question(title: title, subject: subjectId, options: [optionOne : true,optionTwo : false,optionThree : false,optionFour : false])
         return question
     }
     
     @IBAction func pressedSave(_ sender: UIButton) {
-       // addQuestion()
         let writeQuestion = writeQuestion()
         addQuestion(question: writeQuestion)
+        
+        let alert = UIAlertController(title: "Saved", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("default")
+                self.performSegue(withIdentifier: C.addToCategory, sender: self)
+            case .cancel:
+                print("cancel")
+            case .destructive:
+                print("destructive")
+            }
+        }))
     }
     
     
     @IBAction func pressedCancel(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "Are you sure?", message: "Your question will be permanently deleted.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("default")
+                self.performSegue(withIdentifier: C.addToCategory, sender: self)
+            case .cancel:
+                print("cancel")
+            case .destructive:
+                print("destructive")
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("default")
+            case .cancel:
+                print("cancel")
+            case .destructive:
+                print("destructive")
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func addQuestion(question : Question){
-        print("Burda")
         self.ref.child("questions").childByAutoId().setValue(["title" : question.title, "subject" : question.subject, "options" : question.options])
 
     }
@@ -68,8 +103,23 @@ class AddQuestionViewController: ViewController {
         if let btnLabel = sender.titleLabel?.text{
             if btnLabel == "History"{
                 subjectId = "d11"
+            }else if btnLabel == "Turk History"{
+                
+            }else if btnLabel == "Geography"{
+                
+            }else if btnLabel == "Capital Cities"{
+                
+            }else if btnLabel == "Science and Technology"{
+                
+            }else if btnLabel == "General Knowledge"{
+                
+            }else if btnLabel == "Sports"{
+                
+            }else if btnLabel == "Movies"{
+                
+            }else{
+                    print("Error")
             }
-            
         }
     }
     

@@ -4,6 +4,8 @@ struct C{
     static let categorySegue = "CategoryToQuiz"
     static let addSegue = "CategoryToAdd"
     static let scoreToCategory = "ScoreToCategory"
+    static let quizToScore = "QuizToScore"
+    static let addToCategory = "AddToCategory"
     
     struct FireStore {
         static let quizTitle = "quizTitle"

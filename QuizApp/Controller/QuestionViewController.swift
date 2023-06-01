@@ -73,19 +73,16 @@ class QuestionViewController : UIViewController{
         let myAnswer = Int(sender.restorationIdentifier ?? "") ?? 0
         
         if check[myAnswer] == true{
-                print("true")
-            
             score = score + 1
             sender.backgroundColor = UIColor.green
         }else{
-            print("false")
             sender.backgroundColor = UIColor.red
         }
         
             if questionCount != questionsArray.count - 1 {
                 questionCount = questionCount + 1
             }else{
-                self.performSegue(withIdentifier: "QuizToScore", sender: self)
+                self.performSegue(withIdentifier: C.quizToScore, sender: self)
             }
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
