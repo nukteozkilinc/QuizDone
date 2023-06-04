@@ -82,7 +82,7 @@ class CategoryViewController : UIViewController{
           try Auth.auth().signOut()
             navigationController?.popViewController(animated: true)
         } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
         }
     }
     
@@ -115,5 +115,6 @@ class CategoryViewController : UIViewController{
         self.performSegue(withIdentifier: C.addSegue, sender: self)
     }
 }
+
 
 

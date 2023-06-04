@@ -1,22 +1,27 @@
 import UIKit
-import DropDownMenuKit
 import FirebaseCore
 import FirebaseFirestore
 import Firebase
 
 class AddQuestionViewController: ViewController {
     
-    @IBOutlet weak var questionLabel: UITextField!
-    @IBOutlet weak var optionOne: UITextField!
-    @IBOutlet weak var optionTwo: UITextField!
-    @IBOutlet weak var optionThree: UITextField!
-    @IBOutlet weak var optionFour: UITextField!
+    
+    @IBOutlet weak var questionLabel: UITextView!
+    @IBOutlet weak var optionOne: UITextView!
+    
+    
+    @IBOutlet weak var optionFour: UITextView!
+    @IBOutlet weak var optionTwo: UITextView!
+    
     
     @IBOutlet weak var selectCategoryBtn: UIButton!
     @IBOutlet var categoryCollection: [UIButton]!
-    var subjectId : String!
+    @IBOutlet weak var optionThree: UITextView!
+    
     
     var ref: DatabaseReference!
+    let db = Firestore.firestore()
+    var subjectId : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,8 +90,21 @@ class AddQuestionViewController: ViewController {
     }
     
     func addQuestion(question : Question){
-        self.ref.child("questions").childByAutoId().setValue(["title" : question.title, "subject" : question.subject, "options" : question.options])
+        // Add a new document with a generated id.
+        var ref: DocumentReference? = nil
+        ref = db.collection("QuizSuggestions").addDocument(data: [
+            "quizSubject": question.title,
+            "quizId": question.subject,
+            "quizOptions" : question.options
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
 
+    
     }
     
     @IBAction func selectCategoryPressed(_ sender: UIButton) {
@@ -101,25 +119,9 @@ class AddQuestionViewController: ViewController {
     
     @IBAction func categoryPressed(_ sender: UIButton) {
         if let btnLabel = sender.titleLabel?.text{
-            if btnLabel == "History"{
-                subjectId = "d11"
-            }else if btnLabel == "Turk History"{
-                
-            }else if btnLabel == "Geography"{
-                
-            }else if btnLabel == "Capital Cities"{
-                
-            }else if btnLabel == "Science and Technology"{
-                
-            }else if btnLabel == "General Knowledge"{
-                
-            }else if btnLabel == "Sports"{
-                
-            }else if btnLabel == "Movies"{
-                
-            }else{
-                    print("Error")
-            }
+            subjectId = btnLabel
+            //selectCategoryBtn.titleLabel?.text = btnLabel //BUTON ISMI DEGISTIRME
+            
         }
     }
     
