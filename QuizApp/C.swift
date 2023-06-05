@@ -6,6 +6,8 @@ struct C{
     static let scoreToCategory = "ScoreToCategory"
     static let quizToScore = "QuizToScore"
     static let addToCategory = "AddToCategory"
+    static let goToFirstScreen = "GoToFirstScreen"
+    static let goToCategory = "GoToCategory"
     
     struct FireStore {
         static let quizTitle = "quizTitle"
