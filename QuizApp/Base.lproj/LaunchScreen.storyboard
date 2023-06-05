@@ -16,16 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labelsdes;dkald" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfw-jG-0Wi">
-                                <rect key="frame" x="16" y="395" width="473" height="63"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="95 papéis de parede para você baixar e deixar seu celular com a sua cara" translatesAutoresizingMaskIntoConstraints="NO" id="fwP-wR-UUf">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QuizDonecolor" translatesAutoresizingMaskIntoConstraints="NO" id="vtd-U7-XOa">
+                                <rect key="frame" x="28" y="327" width="337" height="149"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fwP-wR-UUf" secondAttribute="bottom" id="bmg-No-p6n"/>
+                            <constraint firstItem="fwP-wR-UUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cNY-AQ-740"/>
+                            <constraint firstItem="fwP-wR-UUf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iaH-Tf-yBV"/>
+                            <constraint firstItem="fwP-wR-UUf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nlT-3K-DXP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -34,8 +40,10 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="95 papéis de parede para você baixar e deixar seu celular com a sua cara" width="193.66667175292969" height="344.33334350585938"/>
+        <image name="QuizDonecolor" width="200" height="150"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
