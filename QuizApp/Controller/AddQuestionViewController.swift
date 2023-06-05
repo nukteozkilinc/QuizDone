@@ -47,7 +47,7 @@ class AddQuestionViewController: ViewController {
         let writeQuestion = writeQuestion()
         addQuestion(question: writeQuestion)
         
-        let alert = UIAlertController(title: "Saved", message: "", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Your question has been saved", message: "We have forwarded your question to our team for review.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
             case .default:
@@ -57,6 +57,8 @@ class AddQuestionViewController: ViewController {
                 print("cancel")
             case .destructive:
                 print("destructive")
+            @unknown default:
+                print("error")
             }
         }))
     }
@@ -74,6 +76,8 @@ class AddQuestionViewController: ViewController {
                 print("cancel")
             case .destructive:
                 print("destructive")
+            @unknown default:
+                print("error")
             }
         }))
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
@@ -84,6 +88,8 @@ class AddQuestionViewController: ViewController {
                 print("cancel")
             case .destructive:
                 print("destructive")
+            @unknown default:
+                print("error")
             }
         }))
         self.present(alert, animated: true, completion: nil)
@@ -120,8 +126,11 @@ class AddQuestionViewController: ViewController {
     @IBAction func categoryPressed(_ sender: UIButton) {
         if let btnLabel = sender.titleLabel?.text{
             subjectId = btnLabel
-            //selectCategoryBtn.titleLabel?.text = btnLabel //BUTON ISMI DEGISTIRME
-            
+            selectCategoryBtn.titleLabel?.text = btnLabel //BUTON ISMI DEGISTIRME
+            categoryCollection.forEach{btn in
+                btn .isHidden = true
+                btn.alpha = 0
+            }
         }
     }
     

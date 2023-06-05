@@ -27,7 +27,7 @@ class ScoreViewController: UIViewController {
         }
     }
     
-    @IBAction func pressedFinish(_ sender: Any) {
-        self.performSegue(withIdentifier: C.scoreToCategory, sender: self)
+    @IBAction func pressedFinish(_ sender: UIButton) {
+        self.performSegue(withIdentifier: C.scoreToCategory,sender: self)
     }
 }

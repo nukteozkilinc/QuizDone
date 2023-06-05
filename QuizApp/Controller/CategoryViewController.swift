@@ -80,7 +80,8 @@ class CategoryViewController : UIViewController{
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         do {
           try Auth.auth().signOut()
-            navigationController?.popViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
+            dismiss(animated: true, completion: nil)
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
@@ -95,12 +96,10 @@ class CategoryViewController : UIViewController{
         
         let senderId = sender.restorationIdentifier ?? "0"
         let index : Int = Int(senderId) ?? 0
-        //let questionViewController = QuestionViewController()
         questionIndex = categories[index].quizId
-        
-        //print(questionIndex ?? "nil")
-        
+      
         self.performSegue(withIdentifier: C.categorySegue, sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

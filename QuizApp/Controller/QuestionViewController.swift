@@ -80,11 +80,12 @@ class QuestionViewController : UIViewController{
         }else{
             sender.backgroundColor = UIColor.red
         }
-        
             if questionCount != questionsArray.count - 1 {
                 questionCount = questionCount + 1
             }else{
                 self.performSegue(withIdentifier: C.quizToScore, sender: self)
+                dismiss(animated: true, completion: nil)
+                
             }
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         }
@@ -104,6 +105,7 @@ class QuestionViewController : UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         let destinationVC = segue.destination as! ScoreViewController
         destinationVC.score = score
         destinationVC.count = countQuestions
