@@ -15,7 +15,20 @@ class LoginViewController : UIViewController {
         if let email = emailTextField.text , let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    print(e)
+                    let alert = UIAlertController(title: "Incorrect Email or Password", message: "Please check your details and try again.", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                        switch action.style{
+                        case .default:
+                            print("default")
+                        case .cancel:
+                            print("cancel")
+                        case .destructive:
+                            print("destructive")
+                        @unknown default:
+                            print("error")
+                        }
+                    }))
+                    self.present(alert, animated: true, completion: nil)
                 }else{
                     //Navigate to Category
                     self.performSegue(withIdentifier: C.loginSegue, sender: self)

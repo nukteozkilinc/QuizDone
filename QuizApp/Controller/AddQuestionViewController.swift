@@ -44,9 +44,7 @@ class AddQuestionViewController: ViewController {
     }
     
     @IBAction func pressedSave(_ sender: UIButton) {
-        let writeQuestion = writeQuestion()
-        addQuestion(question: writeQuestion)
-        
+    
         let alert = UIAlertController(title: "Your question has been saved", message: "We have forwarded your question to our team for review.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
@@ -61,6 +59,10 @@ class AddQuestionViewController: ViewController {
                 print("error")
             }
         }))
+        self.present(alert, animated: true, completion: nil)
+        
+        let writeQuestion = writeQuestion()
+        addQuestion(question: writeQuestion)
     }
     
     
@@ -109,8 +111,6 @@ class AddQuestionViewController: ViewController {
                 print("Document added with ID: \(ref!.documentID)")
             }
         }
-
-    
     }
     
     @IBAction func selectCategoryPressed(_ sender: UIButton) {
