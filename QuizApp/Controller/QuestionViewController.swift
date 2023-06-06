@@ -19,7 +19,7 @@ class QuestionViewController : UIViewController{
     var questionsArray : [Question] = []
     var questionCount : Int = 0
     var score : Int = 0
-    var countQuestions : Int = 0
+    var countQuestions : Int = 1
     
     
     override func viewDidLoad() {
@@ -42,7 +42,6 @@ class QuestionViewController : UIViewController{
                     let question = Question(title: title, subject: subject, options: options)
                     self.questionsArray.append(question)
                 }
-                self.countQuestions = self.countQuestions + 1
             }
             self.updateUI()
         }) { error in
@@ -82,6 +81,7 @@ class QuestionViewController : UIViewController{
         }
             if questionCount != questionsArray.count - 1 {
                 questionCount = questionCount + 1
+                self.countQuestions = self.countQuestions + 1
             }else{
                 self.performSegue(withIdentifier: C.quizToScore, sender: self)
                 dismiss(animated: true, completion: nil)
