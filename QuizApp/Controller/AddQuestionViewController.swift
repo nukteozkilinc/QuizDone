@@ -8,12 +8,8 @@ class AddQuestionViewController: ViewController {
     
     @IBOutlet weak var questionLabel: UITextView!
     @IBOutlet weak var optionOne: UITextView!
-    
-    
     @IBOutlet weak var optionFour: UITextView!
     @IBOutlet weak var optionTwo: UITextView!
-    
-    
     @IBOutlet weak var selectCategoryBtn: UIButton!
     @IBOutlet var categoryCollection: [UIButton]!
     @IBOutlet weak var optionThree: UITextView!
@@ -26,6 +22,9 @@ class AddQuestionViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ref = Database.database(url: C.RealtimeDatabase.url).reference()
+        
+        
+       
         
         categoryCollection.forEach{btn in
             btn .isHidden = true
@@ -126,12 +125,11 @@ class AddQuestionViewController: ViewController {
     @IBAction func categoryPressed(_ sender: UIButton) {
         if let btnLabel = sender.titleLabel?.text{
             subjectId = btnLabel
-            selectCategoryBtn.titleLabel?.text = btnLabel //BUTON ISMI DEGISTIRME
+            selectCategoryBtn.titleLabel?.text = btnLabel
             categoryCollection.forEach{btn in
                 btn .isHidden = true
                 btn.alpha = 0
             }
         }
     }
-    
 }

@@ -71,4 +71,43 @@ class LoginViewController : UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func forgotPassword(_ sender: UIButton) {
+        if let email = emailTextField.text{
+            Auth.auth().sendPasswordReset(withEmail: email) { error in
+                if let e = error{
+                    let alert = UIAlertController(title: "Sorry, something went wrong.", message: "Please check your email address.", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                        switch action.style{
+                        case .default:
+                            print("default")
+                        case .cancel:
+                            print("cancel")
+                        case .destructive:
+                            print("destructive")
+                        @unknown default:
+                            print("error")
+                        }
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }else{
+                    let alert = UIAlertController(title: "Password Reset Email Sent!", message: "An email has been sent to your email address.Follow the directions to reset your password.", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                        switch action.style{
+                        case .default:
+                            print("default")
+                        case .cancel:
+                            print("cancel")
+                        case .destructive:
+                            print("destructive")
+                        @unknown default:
+                            print("error")
+                        }
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
+    }
 }

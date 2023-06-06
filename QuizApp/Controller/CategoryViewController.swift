@@ -5,7 +5,7 @@ import FirebaseFirestore
 
 class CategoryViewController : UIViewController{
     
-    @IBOutlet weak var img1: UIImageView!
+    //@IBOutlet weak var img1: UIImageView!
     @IBOutlet weak var title1: UILabel!
     @IBOutlet weak var desc1: UILabel!
     @IBOutlet weak var title2: UILabel!
