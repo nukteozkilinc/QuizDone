@@ -50,12 +50,10 @@ class CategoryViewController : UIViewController{
                         let data = doc.data()
                         if let quizTitle = data[C.FireStore.quizTitle] as? String ,
                         let quizDesc = data[C.FireStore.quizDesc] as? String ,
-                        let quizImg = data[C.FireStore.quizImg] as? String ,
                         let quizId = data[C.FireStore.quizId] as? String {
                             let category = Category(
                                 quizDesc: quizDesc,
                                 quizId: quizId,
-                                quizImgUrl: quizImg,
                                 quizTitle: quizTitle
                             )
                             self.categories.append(category)

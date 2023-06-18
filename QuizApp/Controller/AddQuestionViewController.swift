@@ -22,10 +22,7 @@ class AddQuestionViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ref = Database.database(url: C.RealtimeDatabase.url).reference()
-        
-        
-       
-        
+
         categoryCollection.forEach{btn in
             btn .isHidden = true
             btn.alpha = 0

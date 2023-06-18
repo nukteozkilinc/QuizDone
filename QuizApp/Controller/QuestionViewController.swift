@@ -13,6 +13,8 @@ class QuestionViewController : UIViewController{
     @IBOutlet weak var fourthButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    
+    
     let db = Firestore.firestore()
     var categoryIndex : String?
     var ref: DatabaseReference!
@@ -57,27 +59,47 @@ class QuestionViewController : UIViewController{
         return answerTitles
     }
     
-    func answerChecked() -> [Bool]{
+    func answerChecked() -> (checkedar : [Bool], corretctAnswer : Int){
         var checkedar : [Bool] = []
         let answerTitles = takingAnswerTitles()
-        for index in answerTitles{
-            if let checked = questionsArray[questionCount].options[index]{
+        var corretctAnswer : Int!
+        for i in answerTitles{
+            if let checked = questionsArray[questionCount].options[i]{
                 checkedar.append(checked)
+                if checked == true{
+                    corretctAnswer = checkedar.firstIndex(of: checked)
+                }
             }
         }
-        return checkedar
+        return ( checkedar , corretctAnswer)
     }
+    
+    func findCorrectAnswer(){
+        let correctAnswer = answerChecked()
         
+        if correctAnswer.corretctAnswer == 0 {
+            firstButton.backgroundColor = UIColor.green
+        }else if correctAnswer.corretctAnswer == 1 {
+            secondButton.backgroundColor = UIColor.green
+        }else if correctAnswer.corretctAnswer == 2 {
+            thirdButton.backgroundColor = UIColor.green
+        }else{
+            fourthButton.backgroundColor = UIColor.green
+        }
+    }
+    
+    
     @IBAction func pressAnswer(_ sender: UIButton) {
         
         let check = answerChecked()
         let myAnswer = Int(sender.restorationIdentifier ?? "") ?? 0
         
-        if check[myAnswer] == true{
+        if check.checkedar[myAnswer] == true{
             score = score + 1
             sender.backgroundColor = UIColor.green
         }else{
             sender.backgroundColor = UIColor.red
+            findCorrectAnswer()
         }
             if questionCount != questionsArray.count - 1 {
                 questionCount = questionCount + 1
